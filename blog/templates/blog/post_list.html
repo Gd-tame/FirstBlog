@@ -11,11 +11,13 @@
     <header>
         <h1>Heading 1</h1>
     </header>
+    {% for post in posts %}
     <article>
-        <time>published:23.06..2022, 12.14</time>
-        <h2>My first Post</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quia impedit porro minus explicabo, excepturi quaerat blanditiis sequi molestiae optio repellendus voluptatibus minima laborum veritatis, esse, fugiat cum? Officiis.</p>
+        <time>{{post.published_date}}</time>
+        <p><h3>{{post.title}}</h3></p>
+        <p>{{post.text|linebreaksbr}}</p>
     </article>
+    {% endfor %}
 
 </body>
 </html>
